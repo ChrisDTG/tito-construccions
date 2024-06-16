@@ -1,0 +1,28 @@
+---
+// LAYOUT
+import Layout from '../layouts/Layout.astro';
+import Header from '../layouts/Header.astro';
+import Footer from '../layouts/Footer.astro';
+
+// COMPONENTS
+import AboutUs from '@/components/AboutUs.astro';
+import Banner from '@/components/Banner.astro';
+
+// CSS
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.min.css";
+---
+
+<Layout title="Welcome to Astro.">
+	<Header />
+    	<Banner titleBanner='NOSOTROS' imgBanner="banner-3.jpg"/>
+		<AboutUs />
+	<Footer />
+</Layout>
+<style lang="sass">
+    @use '../assets/sass/base/resets'
+</style>
+<script>
+	// Astro will bundle and process this automatically
+	import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+</script>

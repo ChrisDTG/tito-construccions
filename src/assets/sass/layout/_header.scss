@@ -1,0 +1,157 @@
+
+
+
+.nav-link.active {
+    color: #ffb600 !important;
+    width: 90px !important;
+    border-bottom: #ffc000 solid 2px;
+    font-weight: 700;
+}
+
+.navbar {
+    margin-top: 64px;
+    text-transform: uppercase;
+}
+
+.navbar.scrolled {
+    margin-top: 0px;
+}
+
+
+.top-bar .container:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #fff;
+    border-right: 20px solid rgba(0, 0, 0, 0);
+    background: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.top-bar .container {
+    padding: 8px 20px 8px;
+    background: #ffc000;
+    position: relative;
+}
+
+ul.top-info {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-weight: 600;
+}
+
+ul.top-info li {
+    position: relative;
+    line-height: 10px;
+    display: inline-block;
+    margin-left: 0;
+    padding-right: 15px;
+}
+
+ul.top-info li i {
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+}
+
+ul.top-info li p.info-text {
+    margin: 0;
+    line-height: normal;
+    display: inline-block;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.navbar {
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 0;
+}
+
+.navbar-toggle {
+    float: right;
+    margin-top: 10px;
+    border-radius: 0;
+    background: #ffb600;
+}
+
+.navbar-toggle i {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.site-navigation .container .row .col-sm-12 {
+    padding-right: 0;
+}
+
+.site-nav-inner button {
+    border: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.navbar-collapse .nav {
+    float: left;
+    display: block;
+}
+
+.navbar-collapse .nav li a {
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    ul.top-info {
+        text-align: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-link.active {
+        color: #ffb600 !important;
+        width: auto !important;
+        border-bottom: #ffc000 solid 2px;
+        font-weight: 700;
+    }
+
+    .navbar-toggle {
+        display: none;
+    }
+
+    .navbar-collapse {
+        display: block;
+        flex-grow: 0;
+    }
+
+    .navbar-collapse .nav {
+        float: right;
+        display: flex;
+    }
+
+    .navbar-collapse .nav li{
+        margin: 0 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    // .navbar-collapse.collapse {
+    //     display: block ;
+    //     height: auto !important;
+    //     padding-bottom: 0;
+    //     overflow: visible !important;
+    // }
+}
+
+@media (min-width: 470px) {
+    .navbar {
+        margin-top: 40px;
+    }
+}

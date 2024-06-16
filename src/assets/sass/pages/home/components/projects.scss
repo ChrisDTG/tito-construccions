@@ -1,0 +1,409 @@
+.title:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    bottom: 0px;
+    width: 50px;
+    height: 2px;
+    background: #ffc000;
+    left: 0;
+    z-index: 1;
+}
+
+// .tutle {
+//     position: absolute;
+//     top: -10%;
+// }
+
+.title {
+    font-size: 23px;
+    font-weight: 800;
+    position: relative;
+    margin-bottom: 15px;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.title:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    bottom: 0px;
+    width: 100px;
+    height: 2px;
+    background: rgba(100, 100, 100, 0.3);
+    left: 0;
+}
+
+
+
+
+
+
+.bi.bi-fullscreen {
+    cursor: pointer;
+}
+
+// PROJECTS
+// 768
+// width TOTAL = 696
+// 696 / 3 = 348
+
+// 992
+// width TOTAL = 936
+// 936 / 3 = 312
+
+// 1200
+// width TOTAL = 1116
+// 1116 / 3 = 372
+
+
+// 1400
+// width TOTAL = 1296
+// 1296 / 3 = 432
+
+.box-listing .isotope-item  .isotope-img-container .gallery-popup img {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .box-listing .isotope-item  .isotope-img-container .gallery-popup img {
+        text-align: center;
+        width: 696px;
+        height: 448px;
+    }
+}
+
+@media (min-width: 992px) {
+    .fila {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .box-listing .isotope-item  .isotope-img-container .gallery-popup img {
+        width: 312px;
+        height: 312px;
+    }
+
+    .title {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .box-listing .isotope-item  .isotope-img-container .gallery-popup img {
+        width: 372px;
+        height: 372px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .box-listing .isotope-item  .isotope-img-container .gallery-popup img {
+        width: 432px;
+        height: 432px;
+    }
+}
+
+
+.background-projects {
+    background-color: #272d33;
+    padding-top: 3rem;
+}
+
+
+.sub-title {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+
+.into-title:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 75px;
+    height: 2px;
+    background: #ffc000;
+    z-index: 1;
+}
+
+.into-title {
+    color: #ffffff;
+    font-weight: 800;
+    position: relative;
+    display: grid;
+    justify-items: center;
+    margin-bottom: 35px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.into-title:after {
+    content: "";
+    position: absolute;
+    
+    bottom: 0px;
+    width: 200px;
+    height: 2px;
+    background: rgba(100, 100, 100, 0.3);
+}
+
+
+
+
+.button-group-wrap .button-group {
+    border-bottom: 4px solid #ffca45;
+    padding-bottom: 3px;
+}
+
+
+
+
+.button-group .filter-active:hover {
+    color: #212121;
+    background: #ffb600;
+}
+
+// .button-group .filter-active.active {
+//     color: #212121;
+//     background: #ffb600;
+// }
+
+.button-group .filter-active {
+    color: #212121;
+    background: #eee;
+    margin: 1px;
+}
+
+.button-group .active {
+    font-weight: 700;
+    background: #ffb600;
+}
+
+
+
+.button-group-wrap {
+    // padding: 15px;
+}
+
+.button-group-wrap h3 {
+    display: inline-block;
+    color: #fff;
+    font-weight: 600;
+    margin: 0 5px 5px;
+}
+
+
+.filter-button-group {margin-bottom: 20px;}
+
+.button-group button {
+    min-width: 50px;
+    background: #eee;
+    color: #222;
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: -1.75px;
+    border: 1px solid #eee;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+}
+
+
+.button-group button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.button-group button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+.box-item {
+        margin-bottom: 2rem;
+        // position: relative;
+        /* transition: all 0.2s ease-out; */
+}
+
+
+
+.item-category {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px 15px;
+    border-radius: 15px;
+}
+.box-item.programming .item-category {
+    background: aquamarine;
+}
+.box-item.cms .item-category {
+    background: #01a6ff;
+    color: #fff;
+}
+.box-item.markup .item-category {
+    background: #f08080;
+    color: #fff;
+}
+.item-id {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 35px;
+    margin: 0;
+    background: #7b68ee;
+    color: #fff;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0 0 5px #7b68ee;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Project Isotope Item */
+
+.isotope-item {
+    padding: 0;
+    color: #fff;
+}
+
+.isotope-img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.isotope-img-container img {
+    -webkit-transform: perspective(1px) scale3d(1.1, 1.1, 1);
+    transform: perspective(1px) scale3d(1.1, 1.1, 1);
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.isotope-img-container:hover img {
+    -webkit-transform: perspective(1px) scale3d(1.15, 1.15, 1);
+    transform: perspective(1px) scale3d(1.15, 1.15, 1);
+}
+
+.isotope-img-container:after {
+    opacity: 0;
+    position: absolute;
+    content: '';
+    top: 0;
+    right: auto;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.isotope-img-container:hover:after {
+    opacity: 1;
+}
+
+.gallery-popup .gallery-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding: 5px 12px;
+    background: #ffb600;
+    color: #fff;
+    opacity: 0;
+    -webkit-transform: perspective(1px) scale3d(0, 0, 0);
+    transform: perspective(1px) scale3d(0, 0, 0);
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.isotope-img-container:hover .gallery-popup .gallery-icon {
+    opacity: 1;
+    -webkit-transform: perspective(1px) scale3d(1, 1, 1);
+    transform: perspective(1px) scale3d(1, 1, 1);
+}
+
+.project-item-info {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    // margin-top: -15%;
+    // bottom: 0;
+    // right: 0;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.project-item-info-content {
+    opacity: 0;
+    -webkit-transform: perspective(1px) translate3d(0, 15px, 0);
+    transform: perspective(1px) translate3d(0, 15px, 0);
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.isotope-img-container:hover .project-item-info-content {
+    opacity: 1;
+    -webkit-transform: perspective(1px) translate3d(0, 0, 0);
+    transform: perspective(1px) translate3d(0, 0, 0);
+}
+
+.project-item-title {
+    font-size: 20px;
+}
+
+.project-item-title a {
+    color: #fff;
+}
+
+.project-item-title a:hover {
+    color: #ffb600;
+}
+
+.project-cat {
+    background: #ffb600;
+    display: inline-block;
+    padding: 2px 8px;
+    font-weight: 800;
+    color: #000;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.general-btn .btn-primary:hover {
+    background: #000;
+}

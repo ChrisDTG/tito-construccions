@@ -1,0 +1,159 @@
+.footer-social ul li a i {
+    color: #9b9b9b;
+    font-size: 24px;
+    -webkit-transition: 400ms;
+    -moz-transition: 400ms;
+    -o-transition: 400ms;
+    transition: 400ms;
+}
+
+.footer-social ul li i {
+    color: #555555;
+    font-size: 24px;
+}
+
+.footer-social ul li a i:hover {
+    color: rgb(13, 110, 253);
+    -webkit-transition: 400ms;
+    -moz-transition: 400ms;
+    -o-transition: 400ms;
+    transition: 400ms;
+}
+
+
+
+/* Footer
+================================================== */
+
+
+/*- Footer common */
+
+
+.footer {
+    background-color: #ffc000;
+    background-image: url(/src/assets/images/parallax3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    color: #747474;
+    padding-top: 20px;
+}
+
+.footer-about {
+    margin-bottom: 3rem;
+}
+
+
+.footer-social ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.footer-social ul li {
+    margin: 0 10px 0 0;
+    display: inline-block;
+}
+
+
+.footer-contact p {
+    margin-top: 2rem;
+}
+.footer-contact div {
+    margin-top: 1.5rem;
+}
+
+.bg-overlay {
+    position: relative;
+}
+.bg-overlay:after {
+    background-color: rgba(0, 0, 0, 0.877);
+    z-index: 0;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.footer-main {
+    padding: 60px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.widget-title:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    bottom: 0px;
+    width: 50px;
+    height: 1px;
+    background: #ffc000;
+    left: 0;
+    z-index: 1;
+}
+
+.widget-title {
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 35px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.widget-title:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    bottom: 0px;
+    width: 100px;
+    height: 1px;
+    background: rgba(255, 255, 255, .3);
+    left: 0;
+}
+
+.working-hours {
+    padding-right: 10px;
+
+    &__days {
+        color:#cccaca;
+    }
+
+    &__text-right {
+        font-weight: 700;
+        color:#cccaca;
+        float: right;
+    }
+}
+
+/*-- Copyright --*/
+
+.copyright {
+    background: #ffc000;
+    color: #333333;
+    padding: 40px 0;
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+    text-align: center;
+}
+.copyright-info {
+    font-size: 13px;
+    text-align: center;
+}
+
+@media (min-width: 494px) {
+    .footer-contact div {
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-about {
+        margin-bottom: 0rem;
+    }
+}

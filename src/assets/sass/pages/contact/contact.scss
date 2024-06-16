@@ -1,0 +1,195 @@
+/* Services
+================================================== */
+
+
+/* Service box */
+
+.ts-service-box .ts-service-icon i {
+    font-size: 36px;
+    float: left;
+    color: #ffb600;
+}
+
+.ts-service-box .ts-service-box-content {
+    margin-left: 62px;
+    margin-bottom: 30px;
+}
+
+.tab-content .ts-service-box .ts-service-box-content {
+    margin-left: 90px;
+}
+
+.ts-service-box .ts-service-box-content h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 28px;
+}
+
+.ts-service-box .ts-service-box-info {
+    margin-left: 90px;
+    margin-bottom: 40px;
+}
+
+.service-box-title {
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+
+.service-box-title a {
+    color: #333;
+}
+
+.service-box-title a:hover {
+    color: #ffb600;
+}
+
+.service-center-img {
+    padding: 0;
+    margin-bottom: -120px;
+}
+
+
+/* Service box bg */
+
+.ts-service-box-bg {
+    // background: #252525;
+    background-color: #272d33;
+    color: #fff;
+    padding: 30px;
+}
+
+.ts-service-box-bg h4,
+.ts-service-box-bg h3 {
+    color: #fff;
+}
+
+
+/* Section title */
+
+.section-sub-title:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 75px;
+    height: 2px;
+    background: #ffc000;
+    z-index: 1;
+}
+
+.section-sub-title {
+    font-size: 30px;
+    font-weight: 800;
+    position: relative;
+    display: grid;
+    justify-items: center;
+    margin-bottom: 35px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.section-sub-title:after {
+    content: "";
+    position: absolute;
+    
+    bottom: 0px;
+    width: 200px;
+    height: 2px;
+    background: rgba(100, 100, 100, 0.3);
+}
+
+
+
+.section-title {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+// .section-sub-title {
+//     font-weight: 800;
+//     font-size: 36px;
+//     line-height: 40px;
+//     margin: 0 0 60px;
+//     color: #212121;
+// }
+
+
+
+// style
+.row div .ts-service-box-bg {
+    border-bottom: #ffffff solid 4px;
+}
+
+.ts-service-box-bg.border {
+    border-top: #ffb600 solid 2px;
+}
+
+
+// BUTTON
+.btn-primary {
+    text-transform: uppercase;
+    background-color: #ffb600;
+    border: 0;
+    border-radius: 3px;
+    padding: 12px 20px 10px;
+    font-weight: 700;
+}
+
+.btn-primary:hover {
+    background: #111;
+}
+
+// .column-title {
+//     font-size: 30px;
+//     font-weight: 700;
+// }
+
+
+.column-title:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    bottom: 0px;
+    width: 50px;
+    height: 1px;
+    background: #ffc000;
+    left: 0;
+    z-index: 1;
+}
+
+.column-title {
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 35px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.column-title:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    bottom: 0px;
+    width: 100px;
+    height: 1px;
+    background: rgba(100, 100, 100, 0.3);
+    left: 0;
+}
+
+
+// .btn-primary:hover, .btn-dark:hover, .btn-white.btn-primary:hover {
+//     background: #111;
+//     color: #fff;
+// }
+
+
+@media (min-width: 992px) {
+    .row div .ts-service-box-bg {
+        border-bottom: none;
+    }
+}

@@ -1,0 +1,297 @@
+.ts-intro {
+    padding-right: 20px;
+}
+
+
+.into-title:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 75px;
+    height: 2px;
+    background: #ffc000;
+    z-index: 1;
+}
+
+.into-title {
+    font-weight: 800;
+    position: relative;
+    display: grid;
+    justify-items: center;
+    margin-bottom: 35px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.into-title:after {
+    content: "";
+    position: absolute;
+    
+    bottom: 0px;
+    width: 200px;
+    height: 2px;
+    background: rgba(100, 100, 100, 0.3);
+}
+
+
+
+.into-sub-title {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: normal;
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+/* Services
+================================================== */
+
+
+/* Service box */
+
+.ts-service-box .ts-service-icon i {
+    font-size: 36px;
+    float: left;
+    color: #ffb600;
+}
+
+.ts-service-box .ts-service-box-content {
+    padding-top: 10px;
+    margin-left: 52px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .ts-service-box .ts-service-box-content {
+        padding-top: 0px;
+    }
+}
+
+
+
+.tab-content .ts-service-box .ts-service-box-content {
+    margin-left: 90px;
+}
+
+.ts-service-box .ts-service-box-content h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 28px;
+}
+
+.ts-service-box .ts-service-box-info {
+    margin-left: 90px;
+    margin-bottom: 40px;
+}
+
+.service-box-title {
+    font-size: 16px;
+    margin: 0 0 10px;
+    font-weight: 700;
+}
+
+.service-box-title a {
+    color: #333;
+}
+
+.service-box-title a:hover {
+    color: #ffb600;
+}
+
+.service-center-img {
+    padding: 0;
+    margin-bottom: -120px;
+}
+
+
+/* Service box bg */
+
+.ts-service-box-bg {
+    background: #252525;
+    color: #fff;
+    padding: 30px;
+}
+
+.ts-service-box-bg h4,
+.ts-service-box-bg h3 {
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+/* Content area
+================================================== */
+
+
+/* Accordion */
+
+.panel-default>.panel-heading {
+    background: none;
+    border-radius: 0;
+    position: relative;
+    padding: 6px 20px;
+}
+
+.panel-group .panel {
+    border-radius: 0;
+    margin-bottom: 10px;
+}
+
+.panel-body {
+    padding: 20px 20px 10px 20px;
+}
+
+.panel-body>img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+h4.panel-title {
+    font-size: 16px;
+    background: none;
+    border: 0;
+    padding: 8px 0 8px 0;
+    line-height: normal;
+    border-radius: 0;
+}
+
+h4.panel-title a {
+    color: #ffb600;
+    display: block;
+}
+
+h4.panel-title span {
+    float: right;
+}
+
+h4.panel-title a.collapsed {
+    color: #333;
+}
+
+h4.panel-title a:before {
+    background: #ffb600;
+    color: #fff;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+}
+
+h4.panel-title a.collapsed:before {
+    background: #303030;
+    color: #fff;
+}
+
+h4.panel-title a:before,
+h4.panel-title a.collapsed:before {
+    font-family: "FontAwesome";
+    position: absolute;
+    z-index: 0;
+    font-size: 14px;
+    right: 15px;
+    padding: 0 5px;
+    text-align: center;
+    border-radius: 3px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+h4.panel-title a:before {
+    content: "\f106";
+}
+
+h4.panel-title a.collapsed:before {
+    content: "\f107";
+}
+
+
+/* Accordion classic */
+
+.panel-classic .panel-heading {
+    padding-left: 15px;
+}
+
+.panel-classic h4.panel-title a:before,
+.panel-classic h4.panel-title a.collapsed:before {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* Facts
+================================================== */
+
+.bg-overlay {
+    position: relative;
+}
+.bg-overlay:after {
+    background-color: rgba(0, 0, 0, 0.877);
+    z-index: 0;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.facts-area {
+    // padding: 100px 0;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    color: #ffffff;
+    background-color: rgb(54, 152, 233);
+    background-image: url(/src/assets/images/background-count.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+}
+
+.facts-wrapper {
+    z-index: 100;
+    text-align: center;
+}
+
+.facts-wrapper .ts-facts {
+    color: #fff;
+    margin-top: 40px;
+}
+
+.ts-facts .ts-facts-icon i {
+    font-size: 42px;
+    color: #ffb600;
+}
+
+.ts-facts .ts-facts-content .ts-facts-num {
+    color: #fff;
+    font-size: 44px;
+    margin: 10px 0 5px;
+}
+
+.ts-facts .ts-facts-content .ts-facts-title {
+    font-size: 16px;
+    color: #ffb600;
+    margin: 0;
+}

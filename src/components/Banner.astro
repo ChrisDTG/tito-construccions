@@ -1,0 +1,25 @@
+---
+interface Props {
+  titleBanner: string;
+  imgBanner: string;
+}
+const { titleBanner, imgBanner } = Astro.props;
+---
+
+<div id="banner-area" class="banner-area" style=`background-image:url(/src/assets/images/banners/${imgBanner})`>
+    <div class="banner-text">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="banner-heading">
+                        <h1 class="banner-title">{titleBanner}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style lang="sass">
+    @use '../assets/sass/components/banner'
+</style>

@@ -1,0 +1,39 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="icon" type="image/png" href="/src/assets/images/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		
+
+		<meta property="og:title" content="Tito Construcciones">
+		<!-- 
+		<meta property="og:description" content="Descripción de tu Página">
+		<meta property="og:image" content="URL_de_tu_imagen.jpg">
+		<meta property="og:url" content="URL_de_tu_sitio_web"> 
+		-->
+		<meta name="robots" content="index, follow">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Empresa familiar que lleva 20 años en la industria de la construcción">
+		
+		<title>Tito Construcciones</title>
+	</head>
+	<body>
+		<slot />
+		<!-- <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script> -->
+		<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+	</body>
+</html>
+

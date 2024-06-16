@@ -1,0 +1,234 @@
+.client {
+    margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    .client {
+        margin-top: 0rem;
+    }
+}
+
+/* Testimonial
+================================================== */
+
+.testimonial-area {
+    padding: 100px 0;
+    background-color: #ffb600;
+    background-image: url(../images/parallax2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+}
+
+.testimonial-area .border-title,
+.testimonial-area .border-sub-title {
+    color: #fff;
+}
+
+.quote-item .quote-text {
+    margin: 0 0 10px;
+    display: inline-block;
+    padding: 0 40px 30px 60px;
+    background-color: #fff;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.quote-subitem {
+    position: relative;
+}
+.bi.bi-quote {
+    position: absolute;
+    font-size: 40px;
+    left: 0;
+    top: -12px;
+    color: #ffc009;
+}
+
+img.testimonial-thumb {
+    max-width: 80px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.quote-item-info {
+    padding-top: 15px;
+    display: inline-block;
+}
+
+.quote-author {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0 0 2px;
+    font-weight: 700;
+    display: block;
+    color: #ffb600;
+}
+.quote-author a {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0 0 2px;
+    font-weight: 700;
+    display: block;
+    text-decoration: none;
+    color: #ffb600;
+}
+.quote-author a:hover {
+    text-decoration: underline;
+    color: #272d33;
+}
+
+.quote-item-footer {
+    margin-top: 0;
+    margin-left: 60px;
+}
+
+
+/* Testimonial Border */
+
+.quote-item.quote-border .quote-text-border {
+    border: 1px solid #ffb600;
+    padding: 20px;
+    position: relative;
+    line-height: 28px;
+    color: #666;
+    font-size: 18px;
+    text-align: center;
+}
+
+.quote-item.quote-border .quote-text-border:before {
+    border: 12px solid;
+    border-color: #e1e1e1 transparent transparent;
+    border-top-color: #ffb600;
+    bottom: -24px;
+    position: absolute;
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    left: 0;
+    margin: 0 auto;
+    right: 0;
+}
+
+.quote-item.quote-border .quote-text-border:after {
+    border: 12px solid;
+    border-color: #fff transparent transparent;
+    bottom: -22px;
+    position: absolute;
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    left: 0;
+    margin: 0 auto;
+    right: 0;
+}
+
+.quote-item.quote-border .quote-item-footer {
+    margin-left: 0;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.quote-item.quote-border .quote-item-footer img.testimonial-thumb {
+    float: none;
+    margin: 0;
+}
+
+.quote-item.quote-border .quote-item-footer .quote-item-info {
+    display: block;
+}
+
+
+
+
+
+
+
+/* Column title */
+.column-title:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    bottom: 0px;
+    width: 50px;
+    height: 2px;
+    background: #ffc000;
+    left: 0;
+    z-index: 1;
+}
+
+.column-title {
+    font-size: 24px;
+    font-weight: 800;
+    position: relative;
+    margin: 0 0 40px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.column-title:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    bottom: 0px;
+    width: 100px;
+    height: 2px;
+    background: rgba(100, 100, 100, 0.3);
+    left: 0;
+}
+
+
+
+
+
+.column-title-small {
+    font-size: 20px;
+    margin: 0 0 25px;
+}
+
+
+
+
+.tns-nav {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+#sliderPager  {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#sliderPager button {
+    height: 13px;
+  width: 8px;
+  background-color: #a5a5a5;
+  border: none;
+  margin-left: 7px;
+  border-radius: 50%;
+}
+.tns-nav-active {
+    background-color: #ffc000 !important;
+}
+
+button.tns-nav  {
+    height: 73px;
+    width: 58px;
+    background-color: #a5a5a5 !important;
+    border: none;
+    margin-left: 7px;
+    border-radius: 50%;
+}
+
+.tns-nav .tns-nav-active {
+    background-color: black;
+}
+
