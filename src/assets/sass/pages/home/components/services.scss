@@ -1,0 +1,148 @@
+/* Section title */
+
+.section-title {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+// .section-sub-title {
+//     font-weight: 900;
+//     font-size: 36px;
+//     line-height: 46px;
+//     color: #212121;
+// }
+
+.section-sub-title:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 75px;
+    height: 2px;
+    background: #ffc000;
+    z-index: 1;
+}
+
+.section-sub-title {
+    font-weight: 900;
+    line-height: 46px;
+    font-size: 36px;
+    position: relative;
+    display: grid;
+    justify-items: center;
+    margin-bottom: 35px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.section-sub-title:after {
+    content: "";
+    position: absolute;
+    
+    bottom: 0px;
+    width: 200px;
+    height: 2px;
+    background: rgba(100, 100, 100, 0.3);
+}
+
+
+
+
+
+
+
+/* Services
+================================================== */
+
+.pull-left {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+/* Service box */
+
+.ts-service-box .ts-service-icon i {
+    font-size: 36px;
+    float: left;
+    color: #ffb600;
+}
+
+.ts-service-box .ts-service-box-content {
+    margin-left: 62px;
+    margin-bottom: 30px;
+}
+
+.tab-content .ts-service-box .ts-service-box-content {
+    margin-left: 90px;
+}
+
+.ts-service-box .ts-service-box-content h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 28px;
+}
+
+.ts-service-box {
+    position: relative;
+}
+
+.ts-service-box-img {
+    position: absolute;
+    left: 0;
+}
+
+.ts-service-box .ts-service-box-info {
+    margin-left: 75px;
+}
+
+.service-box-title {
+    font-size: 16px;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+}
+
+.service-box-title a {
+    color: #000000;
+    font-weight: 700;
+}
+
+.service-box-title a:hover {
+}
+
+.service-center-img {
+    padding: 0;
+    width: 250px;
+}
+
+
+/* Service box bg */
+
+.ts-service-box-bg {
+    background: #252525;
+    color: #fff;
+    padding: 30px;
+}
+
+.ts-service-box-bg h4,
+.ts-service-box-bg h3 {
+    color: #fff;
+}
+
+
+@media (min-width: 1052px) {
+    .ts-service-box {
+        position: relative;
+        height: 100px;
+    }
+}
+
+    // @media (min-width: 768px) and (max-width: 991px) {
+
+//     /* Service */
+//     .service-center-img {
+//         padding: 35px 125px 45px;
+//         margin-bottom: 0;
+//     }
+// }

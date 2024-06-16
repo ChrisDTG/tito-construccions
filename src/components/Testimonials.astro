@@ -1,0 +1,90 @@
+<section class="content">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="column-title">Testimonios</h3>
+                <div id="center" class="owl-carousel owl-theme center">
+                    <div class="item">
+                        <div class="quote-item">
+                            <div class="quote-subitem">
+                                <i class="bi bi-quote"></i>
+                                <span class="quote-text">
+                                    Excelente compromiso de parte de Hector Tito, que se encarga que todo el trabajo sea de muy buena calidad.
+                                </span>
+                            </div>
+                            
+
+                            <div class="quote-item-footer">
+                                <img class="testimonial-thumb" src="/src/assets/images/clients/1-garcia cuerva.jfif" alt="testimonial">
+                                <div class="quote-item-info">
+                                    <h3 class="quote-author"><a href="https://www.linkedin.com/in/alejandro-garc%C3%ADa-cuerva-7528232b/?originalSubdomain=ar">Alejandro García Cuerva</a></h3>
+                                    <span class="quote-subtext">GERENTE en CREARQ CONSTRUCCIONES SRL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="quote-item">
+                            <div class="quote-subitem">
+                                <i class="bi bi-quote"></i>
+                                <span class="quote-text">
+                                    Hector Tito es totalmente confiable y comprometido en su trabajo y siempre esta disponible.
+                                </span>
+                            </div>
+
+                            <div class="quote-item-footer">
+                                <img class="testimonial-thumb" src="/src/assets/images/clients/2-images.jfif" alt="testimonial">
+                                <div class="quote-item-info">
+                                    <h3 class="quote-author">Diego Da Sambajio</h3>
+                                    <span class="quote-subtext">Dueño de HAMBURGA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="sliderPager">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+
+            <div class="col-md-6 client">
+                <h3 class="column-title">Clientes Felices</h3>
+                <div class="d-flex flex-wrap">
+                    <div class="d-inline-block">
+                        <a href="https://crearq.com.ar/"><img class="img-responsive" src="/src/assets/images/clients/logos/1-logocrearq.png" width="170" height="150" /></a>
+
+                    </div>
+                    <div class="d-inline-block mt-2">
+                        <a href="https://www.hamburga.com.ar/"><img class="img-responsive" src="/src/assets/images/clients/logos/2-hamburga.png" width="110" height="110" /></a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style lang="sass">
+    @use '../assets/sass/components/testimonials'
+</style>
+
+<script>
+    import { tns } from "tiny-slider";
+
+    tns({
+        container: '#center',
+        items: 1,
+        center: true,
+        loop: false,
+        swipeAngle: false,
+        speed: 400,
+        controls: false,
+        navPosition: "bottom",
+        mode: 'carousel',
+        nav: true,
+        navContainer: '#sliderPager'
+    });
+</script>

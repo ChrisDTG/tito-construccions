@@ -1,0 +1,22 @@
+{
+  "name": "tito-constructions",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.7.0",
+    "astro": "^4.8.6",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "photoswipe": "^5.4.4",
+    "sass": "^1.77.2",
+    "tiny-slider": "^2.9.4",
+    "typescript": "^5.4.5"
+  }
+}
