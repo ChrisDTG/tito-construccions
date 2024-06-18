@@ -26,3 +26,6 @@ netlify.toml
 
 # jetbrains setting folder
 .idea/
+
+# Local Netlify folder
+.netlify
