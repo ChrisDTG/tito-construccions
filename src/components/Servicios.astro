@@ -1,3 +1,17 @@
+---
+// A
+import service_1 from "../assets/images/services/service-1.webp"
+import service_2 from "../assets/images/services/service-2.webp"
+import service_3 from "../assets/images/services/service-3.webp"
+import service_4 from "../assets/images/services/service-4.webp"
+
+// ICONS
+import service_icon_1 from "../assets/images/icons/service-icon-1.png";
+import service_icon_2 from "../assets/images/icons/service-icon-2.png";
+import service_icon_3 from "../assets/images/icons/service-icon-3.png";
+import service_icon_4 from "../assets/images/icons/service-icon-4.png";
+---
+
 <section id="main-container" class="main-container">
     <div class="container">
         <div class="row mt-5">
@@ -5,10 +19,10 @@
             <div class="col-lg-6">
                 <div class="ts-service-box">
                     <div class="ts-service-image-wrapper">
-                        <img class="img-responsive" src="/src/assets/images/services/service-1.webp" alt="">
+                        <img class="img-responsive" src={service_1.src} alt="">
                     </div>
                     <div class="ts-service-box-img pull-left">
-                        <img src="/src/assets/images/icons/service-icon-1.png" alt="" />
+                        <img src={service_icon_1.src} alt="" />
                     </div>
                     <div class="ts-service-info">
                         <h3 class="service-box-title">CONSTRUCCION DE VIVIENDAS</h3>
@@ -18,14 +32,14 @@
                 </div>
                 <div class="ts-service-box">
                     <div class="ts-service-image-wrapper">
-                        <img class="img-responsive" src="/src/assets/images/services/service-4.webp" alt="">
+                        <img class="img-responsive" src={service_4.src} alt="">
                     </div>
                     <div class="ts-service-box-img pull-left">
-                        <img src="/src/assets/images/icons/service-icon-2.png" alt="" />
+                        <img src={service_icon_2.src} alt="" />
                     </div>
                     <div class="ts-service-info">
-                        <h3 class="service-box-title">REMODELACIÓN DE EDIFICIOS</h3>
-                        <p>Remodelamos todo tipo de edificios respetando las normas limpieza que se debe tener para no causar problemas.</p>
+                        <h3 class="service-box-title">REMODELACIÓN DE VIVIENDAS</h3>
+                        <p>Remodelamos todo tipo de viviendas respetando las normas limpieza que se debe tener para no causar problemas.</p>
 
                     </div>
                 </div>
@@ -35,10 +49,10 @@
             <div class="col-lg-6">
                 <div class="ts-service-box">
                     <div class="ts-service-image-wrapper">
-                        <img class="img-responsive" src="/src/assets/images/services/service-2.webp" alt="">
+                        <img class="img-responsive" src={service_2.src} alt="">
                     </div>
                     <div class="ts-service-box-img pull-left">
-                        <img src="/src/assets/images/icons/service-icon-3.png" alt="" />
+                        <img src={service_icon_3.src} alt="" />
                     </div>
                     <div class="ts-service-info">
                         <h3 class="service-box-title">Diseño de Interiores</h3>
@@ -47,10 +61,10 @@
                 </div>
                 <div class="ts-service-box">
                     <div class="ts-service-image-wrapper">
-                        <img class="img-responsive" src="/src/assets/images/services/service-3.webp" alt="">
+                        <img class="img-responsive" src={service_3.src} alt="">
                     </div>
                     <div class="ts-service-box-img pull-left">
-                        <img src="/src/assets/images/icons/service-icon-4.png" alt="" />
+                        <img src={service_icon_4.src} alt="" />
                     </div>
                     <div class="ts-service-info">
                         <h3 class="service-box-title">Diseño de Exteriores</h3>

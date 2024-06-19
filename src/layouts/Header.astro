@@ -47,10 +47,10 @@ import Logo from "@/components/Logo.astro";
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class=`nav-link` aria-current="page" href="/">Inicio</a>
-          <a class=`nav-link` href="/about-us">Nosotros</a>
-          <a class=`nav-link` href="/services">Servicios</a>
-          <a class=`nav-link` href="/projects">Proyectos</a>
-          <a class=`nav-link` href="/contact">Contacto</a>
+          <a class=`nav-link` href="/about-us/">Nosotros</a>
+          <a class=`nav-link` href="/services/">Servicios</a>
+          <a class=`nav-link` href="/projects/">Proyectos</a>
+          <a class=`nav-link` href="/contact/">Contacto</a>
         </div>
       </div>
     </div>
@@ -61,25 +61,21 @@ import Logo from "@/components/Logo.astro";
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const navbar = document.querySelector<HTMLElement>('.navbar');
+        const nav = document.querySelector(".navbar-nav");
+        const navLinks = nav.querySelectorAll(".nav-link");
+        const currentURL = window.location.href as string;
+        navLinks.forEach((link) => {
+            if (link.href === currentURL) {
+                link.classList.add("active");
+            }
+        });
 
+        const navbar = document.querySelector('.navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) { // Puedes ajustar el valor según tus necesidades
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
-            }
-        });
-    });
-
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const nav = document.querySelector<HTMLElement>(".navbar-nav");
-        const navLinks = nav.querySelectorAll<HTMLElement>(".nav-link");
-        const currentURL = window.location.href as string;
-        navLinks.forEach((link: Element) => {
-            if (link.href === currentURL) {
-                link.classList.add("active");
             }
         });
     });
