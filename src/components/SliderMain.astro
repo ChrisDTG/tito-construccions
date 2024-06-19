@@ -1,4 +1,10 @@
-<!-- SLIDER MAIN -->
+---
+// IMG
+import slider_1 from "../assets/images/slider/slider-main/bg-1.webp"
+import slider_2 from "../assets/images/slider/slider-main/bg-2.webp"
+import slider_3 from "../assets/images/slider/slider-main/bg-3.webp"
+---
+
 <div id="carouselExampleDark" class="carousel slide position-relative">
     <div class="carousel-indicators">
         <button
@@ -21,7 +27,7 @@
     </div>
     <div class="carousel-inner" >
         <div class="carousel-item active" data-bs-interval="100">
-            <img src="./src/assets/images/slider/slider-main/bg-1.webp"
+            <img src={slider_1.src}
             class="d-block w-100" alt="..." />
             <div class="carousel-caption d-md-block">
                 <h2 class="slide-title animated4">20 años de servicio</h2>
@@ -29,7 +35,7 @@
             </div>
         </div>
         <div class="carousel-item" data-bs-interval="1000">
-            <img src="./src/assets/images/slider/slider-main/bg-2.webp"
+            <img src={slider_2.src}
             class="d-block w-100" alt="..." />
             <div class="carousel-caption d-md-block">
                 <h3 class="slide-title animated3">Cuando te importa el servicio</h3>
@@ -40,7 +46,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img src="./src/assets/images/slider/slider-main/bg-3.webp"
+            <img src={slider_3.src}
             class="d-block w-100" alt="..." />
             <div class="carousel-caption d-md-block">
                 <h2 class="slide-title animated6">Conoce a los Arquitectos y Maestros Mayores de Obra</h2>
@@ -74,28 +80,3 @@
 <style lang="sass">
     @use '../assets/sass/components/slider-main'
 </style>
-<!-- 
-<script>
-    /* ----------------------------------------------------------- */
-	/*  Main slideshow
-	/* ----------------------------------------------------------- */
-	import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min.js'
-
-    // Get carousel element 
-    const mainSlide = document.getElementById('main-slide')as HTMLElement;
-
-    // Activate Carousel 
-    new bootstrap.Carousel(mainSlide, {
-        interval: 100,
-        pause: 'hover'
-    });
-
-    // Pause the carousel when the mouse is over it 
-    mainSlide.addEventListener('hover', function () { 
-        new bootstrap.Carousel(mainSlide).pause(); 
-    }); 
-
-    mainSlide.addEventListener('mouseleave', function () { 
-        new bootstrap.Carousel(mainSlide).cycle(); 
-    }); 
-</script> -->

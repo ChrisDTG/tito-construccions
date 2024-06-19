@@ -1,3 +1,13 @@
+---
+// IMG
+import client_1 from "../assets/images/clients/1-garcia-cuerva.webp"
+import client_2 from "../assets/images/clients/2-images.webp"
+
+// LOGO
+import logo_1 from "../assets/images/clients/logos/1-logocrearq.png"
+import logo_2 from "../assets/images/clients/logos/2-hamburga.png"
+---
+
 <section class="content">
     <div class="container my-5">
         <div class="row">
@@ -15,7 +25,7 @@
                             
 
                             <div class="quote-item-footer">
-                                <img class="testimonial-thumb" src="./src/assets/images/clients/1-garcia cuerva.jfif" alt="testimonial">
+                                <img class="testimonial-thumb" src={client_1.src} alt="testimonial">
                                 <div class="quote-item-info">
                                     <h3 class="quote-author"><a href="https://www.linkedin.com/in/alejandro-garc%C3%ADa-cuerva-7528232b/?originalSubdomain=ar">Alejandro García Cuerva</a></h3>
                                     <span class="quote-subtext">GERENTE en CREARQ CONSTRUCCIONES SRL</span>
@@ -34,7 +44,7 @@
                             </div>
 
                             <div class="quote-item-footer">
-                                <img class="testimonial-thumb" src="./src/assets/images/clients/2-images.jfif" alt="testimonial">
+                                <img class="testimonial-thumb" src={client_2.src} alt="testimonial">
                                 <div class="quote-item-info">
                                     <h3 class="quote-author">Diego Da Sambajio</h3>
                                     <span class="quote-subtext">Dueño de HAMBURGA</span>
@@ -53,11 +63,11 @@
                 <h3 class="column-title">Clientes Felices</h3>
                 <div class="d-flex flex-wrap">
                     <div class="d-inline-block">
-                        <a href="https://crearq.com.ar/"><img class="img-responsive" src="./src/assets/images/clients/logos/1-logocrearq.png" width="170" height="150" /></a>
+                        <a href="https://crearq.com.ar/"><img class="img-responsive" src={logo_1.src} width="170" height="150" /></a>
 
                     </div>
                     <div class="d-inline-block mt-2">
-                        <a href="https://www.hamburga.com.ar/"><img class="img-responsive" src="./src/assets/images/clients/logos/2-hamburga.png" width="110" height="110" /></a>
+                        <a href="https://www.hamburga.com.ar/"><img class="img-responsive" src={logo_2.src} width="110" height="110" /></a>
 
                     </div>
                 </div>

@@ -1,4 +1,14 @@
+---
 
+// IMG
+import serviceCenter from "../assets/images/services/service-center.webp"
+
+// ICONS
+import serviceIcon_1 from "../assets/images/icons/service-icon-1.png"
+import serviceIcon_2 from "../assets/images/icons/service-icon-1.png"
+import serviceIcon_3 from "../assets/images/icons/service-icon-1.png"
+import serviceIcon_4 from "../assets/images/icons/service-icon-1.png"
+---
 
 <section id="ts-service-area" class="ts-service-area m-5">
     <div class="container">
@@ -8,7 +18,7 @@
         </div>
 
         <div class="row text-center justify-content-center">
-            <img class="service-center-img img-responsive" src="./src/assets/images/services/service-center.webp" alt="" />
+            <img class="service-center-img img-responsive" src={serviceCenter.src} alt="" />
         </div>
 
         <div class="row border-4 border border-warning-subtle rounded-1">
@@ -16,7 +26,7 @@
             <div class="col-md-6">
                 <div class="ts-service-box mt-4 d-block">
                     <div class="ts-service-box-img pull-left">
-                        <img src="./src/assets/images/icons/service-icon-1.png" alt="" />
+                        <img src={serviceIcon_1.src} alt="" />
                     </div>
                     <div class="ts-service-box-info">
                         <h3 class="service-box-title"><a href="#">CONSTRUCCION DE VIVIENDAS</a></h3>
@@ -26,7 +36,7 @@
 
                 <div class="ts-service-box">
                     <div class="ts-service-box-img pull-left">
-                        <img src="./src/assets/images/icons/service-icon-2.png" alt="" />
+                        <img src={serviceIcon_2.src} alt="" />
                     </div>
                     <div class="ts-service-box-info">
                         <h3 class="service-box-title"><a href="#">REMODELACIÓN DE EDIFICIOS</a></h3>
@@ -38,7 +48,7 @@
             <div class="col-md-6">
                 <div class="ts-service-box mt-4 d-block">
                     <div class="ts-service-box-img pull-left">
-                        <img src="./src/assets/images/icons/service-icon-3.png" alt="" />
+                        <img src={serviceIcon_3.src} alt="" />
                     </div>
                     <div class="ts-service-box-info">
                         <h3 class="service-box-title"><a href="#">Diseño de Interiores</a></h3>
@@ -47,7 +57,7 @@
                 </div>
                 <div class="ts-service-box">
                     <div class="ts-service-box-img pull-left">
-                        <img src="./src/assets/images/icons/service-icon-4.png" alt="" />
+                        <img src={serviceIcon_4.src} alt="" />
                     </div>
                     <div class="ts-service-box-info">
                         <h3 class="service-box-title"><a href="#">Diseño de Exteriores</a></h3>

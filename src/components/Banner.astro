@@ -1,12 +1,12 @@
 ---
 interface Props {
-  titleBanner: string;
-  imgBanner: string;
+    titleBanner: string;
+    imgBanner: string;
 }
 const { titleBanner, imgBanner } = Astro.props;
 ---
 
-<div id="banner-area" class="banner-area" style=`background-image:url(./src/assets/images/banners/${imgBanner})`>
+<div id="banner-area" class=`banner-area ${imgBanner}`>
     <div class="banner-text">
         <div class="container">
             <div class="row">
