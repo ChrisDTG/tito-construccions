@@ -1,10 +1,11 @@
 ---
 // ICONS
-import fact_1 from "../assets/images/icons/fact-1.png";
-import fact_2 from "../assets/images/icons/fact-2.png";
-import fact_4 from "../assets/images/icons/fact-4.png";
+import fact_1 from "../assets/images/icons/fact-1.webp";
+import fact_2 from "../assets/images/icons/fact-2.webp";
+import fact_4 from "../assets/images/icons/fact-4.webp";
 ---
 
+<!-- ABOUT US -->
 <section id="ts-features" class="ts-features">
     <div class="container mt-5">
         <div class="row">
@@ -20,8 +21,6 @@ import fact_4 from "../assets/images/icons/fact-4.png";
                         que puedas llevar a cabo la construccion de tu vivienda.
                     </p>
                 </div>
-
-                <div class="gap-20"></div>
 
                 <div class="row">
                     <div class="col-md-6">
@@ -133,15 +132,14 @@ import fact_4 from "../assets/images/icons/fact-4.png";
 </section>
 
 
+<!-- COUNTER -->
 <section id="facts" class="facts-area bg-overlay mt-5">
     <div class="container">
         <div class="row">
             <div class="facts-wrapper">
                 <div class="row">
                     <div class="col-sm-4 ts-facts">
-                        <div class="ts-facts-img">
                             <img src={fact_1.src} alt="" />
-                        </div>
                         <div class="ts-facts-content">
                             <h2 class="ts-facts-num"><span class="counterUp" data-count="34">0</span></h2>
                             <h3 class="ts-facts-title">Total Proyectos</h3>
@@ -149,9 +147,7 @@ import fact_4 from "../assets/images/icons/fact-4.png";
                     </div>
     
                     <div class="col-sm-4 ts-facts">
-                        <div class="ts-facts-img">
                             <img src={fact_2.src} alt="" />
-                        </div>
                         <div class="ts-facts-content">
                             <h2 class="ts-facts-num"><span class="counterUp" data-count="30">0</span></h2>
                             <h3 class="ts-facts-title">Miembros</h3>
@@ -159,9 +155,7 @@ import fact_4 from "../assets/images/icons/fact-4.png";
                     </div>
     
                     <div class="col-sm-4 ts-facts">
-                        <div class="ts-facts-img">
                             <img src={fact_4.src} alt="" />
-                        </div>
                         <div class="ts-facts-content">
                             <h2 class="ts-facts-num"><span class="counterUp" data-count="13">0</span></h2>
                             <h3 class="ts-facts-title">Ciudades donde Trabajamos</h3>
@@ -174,12 +168,12 @@ import fact_4 from "../assets/images/icons/fact-4.png";
 </section>
 
 <style lang="sass">
-    @use '../assets/sass/pages/home/home'
+    @use '../assets/sass/components/about-us'
 </style>
 
 <script>
+    let oTop: number;
     function counter() {
-        let oTop: number;
         const counterUpElements = document.querySelectorAll<HTMLElement>('.counterUp');
         
         if (counterUpElements.length !== 0) {
@@ -194,7 +188,7 @@ import fact_4 from "../assets/images/icons/fact-4.png";
                 const animateCount = () => {
                     const start = countNum.value;
                     const end = countTo;
-                    const duration = 1000;
+                    const duration = 900;
                     let startTime: number | null = null;
 
                     function animate(timestamp: number) {

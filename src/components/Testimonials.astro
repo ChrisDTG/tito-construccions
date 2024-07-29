@@ -4,51 +4,46 @@ import client_1 from "../assets/images/clients/1-garcia-cuerva.webp"
 import client_2 from "../assets/images/clients/2-images.webp"
 
 // LOGO
-import logo_1 from "../assets/images/clients/logos/1-logocrearq.png"
-import logo_2 from "../assets/images/clients/logos/2-hamburga.png"
+import logo_1 from "../assets/images/clients/logos/1-logocrearq.webp"
+import logo_2 from "../assets/images/clients/logos/2-hamburga.webp"
 ---
 
-<section class="content">
+<section>
     <div class="container my-5">
         <div class="row">
             <div class="col-md-6">
                 <h3 class="column-title">Testimonios</h3>
                 <div id="center" class="owl-carousel owl-theme center">
-                    <div class="item">
-                        <div class="quote-item">
-                            <div class="quote-subitem">
-                                <i class="bi bi-quote"></i>
-                                <span class="quote-text">
-                                    Excelente compromiso de parte de Hector Tito, que se encarga que todo el trabajo sea de muy buena calidad.
-                                </span>
-                            </div>
-                            
+                    <div class="quote-item">
+                        <div class="quote-subitem">
+                            <i class="bi bi-quote"></i>
+                            <span class="quote-text">
+                                Excelente compromiso de parte de Hector Tito, que se encarga que todo el trabajo sea de muy buena calidad.
+                            </span>
+                        </div>
 
-                            <div class="quote-item-footer">
-                                <img class="testimonial-thumb" src={client_1.src} alt="testimonial">
-                                <div class="quote-item-info">
-                                    <h3 class="quote-author"><a href="https://www.linkedin.com/in/alejandro-garc%C3%ADa-cuerva-7528232b/?originalSubdomain=ar">Alejandro García Cuerva</a></h3>
-                                    <span class="quote-subtext">GERENTE en CREARQ CONSTRUCCIONES SRL</span>
-                                </div>
+                        <div class="quote-item-footer">
+                            <img class="testimonial-thumb" src={client_1.src} alt="testimonial">
+                            <div class="quote-item-info">
+                                <h3 class="quote-author"><a href="https://www.linkedin.com/in/alejandro-garc%C3%ADa-cuerva-7528232b/?originalSubdomain=ar">Alejandro García Cuerva</a></h3>
+                                <span>GERENTE en CREARQ CONSTRUCCIONES SRL</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="item">
-                        <div class="quote-item">
-                            <div class="quote-subitem">
-                                <i class="bi bi-quote"></i>
-                                <span class="quote-text">
-                                    Hector Tito es totalmente confiable y comprometido en su trabajo y siempre esta disponible.
-                                </span>
-                            </div>
+                    <div class="quote-item">
+                        <div class="quote-subitem">
+                            <i class="bi bi-quote"></i>
+                            <span class="quote-text">
+                                Hector Tito es totalmente confiable y comprometido en su trabajo y siempre esta disponible.
+                            </span>
+                        </div>
 
-                            <div class="quote-item-footer">
-                                <img class="testimonial-thumb" src={client_2.src} alt="testimonial">
-                                <div class="quote-item-info">
-                                    <h3 class="quote-author">Diego Da Sambajio</h3>
-                                    <span class="quote-subtext">Dueño de HAMBURGA</span>
-                                </div>
+                        <div class="quote-item-footer">
+                            <img class="testimonial-thumb" src={client_2.src} alt="testimonial">
+                            <div class="quote-item-info">
+                                <h3 class="quote-author">Diego Da Sambajio</h3>
+                                <span>Dueño de HAMBURGA</span>
                             </div>
                         </div>
                     </div>
@@ -63,16 +58,15 @@ import logo_2 from "../assets/images/clients/logos/2-hamburga.png"
                 <h3 class="column-title">Clientes Felices</h3>
                 <div class="d-flex flex-wrap">
                     <div class="d-inline-block">
-                        <a href="https://crearq.com.ar/"><img class="img-responsive" src={logo_1.src} width="170" height="150" /></a>
+                        <a href="https://crearq.com.ar/"><img src={logo_1.src} width="170" height="150" /></a>
 
                     </div>
                     <div class="d-inline-block mt-2">
-                        <a href="https://www.hamburga.com.ar/"><img class="img-responsive" src={logo_2.src} width="110" height="110" /></a>
+                        <a href="https://www.hamburga.com.ar/"><img src={logo_2.src} width="110" height="110" /></a>
 
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
@@ -87,8 +81,10 @@ import logo_2 from "../assets/images/clients/logos/2-hamburga.png"
     tns({
         container: '#center',
         items: 1,
-        center: true,
-        loop: false,
+        // autoplay: true,
+        // autoplayTimeout: 10000,
+        // autoplayButtonOutput: false,
+        loop: true,
         swipeAngle: false,
         speed: 400,
         controls: false,

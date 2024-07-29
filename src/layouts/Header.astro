@@ -17,9 +17,6 @@ import Logo from "@/components/Logo.astro";
                     </li>
                 </ul>
             </div>
-            <div class="col-md-4 col-sm-12 col-xs-12">
-                
-            </div>
         </div>
     </div>
 </div>
@@ -29,8 +26,8 @@ import Logo from "@/components/Logo.astro";
         <!-- // 42 -->
         <!-- <a class="navbar-brand" href="#">LOGO</a> -->
         <!-- // 56 -->
-        <!-- /// width = 183.5
-        /// height = 60.23 -->
+        <!-- /// width = 183.5 -->
+        <!-- /// height = 60.23 -->
         <a href="/">
             <Logo 
                 width_LOGO="140.000000pt" 
@@ -47,10 +44,10 @@ import Logo from "@/components/Logo.astro";
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class=`nav-link` aria-current="page" href="/">Inicio</a>
-          <a class=`nav-link` href="/about-us/">Nosotros</a>
-          <a class=`nav-link` href="/services/">Servicios</a>
-          <a class=`nav-link` href="/projects/">Proyectos</a>
-          <a class=`nav-link` href="/contact/">Contacto</a>
+          <a class=`nav-link` href="/about-us">Nosotros</a>
+          <a class=`nav-link` href="/services">Servicios</a>
+          <a class=`nav-link` href="/projects">Proyectos</a>
+          <a class=`nav-link` href="/contact">Contacto</a>
         </div>
       </div>
     </div>
@@ -61,18 +58,20 @@ import Logo from "@/components/Logo.astro";
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const nav = document.querySelector(".navbar-nav");
-        const navLinks = nav.querySelectorAll(".nav-link");
-        const currentURL = window.location.href as string;
+        const nav = document.querySelector(".navbar-nav") as HTMLElement;
+        const navLinks = nav.querySelectorAll(".nav-link") as NodeListOf<HTMLAnchorElement>;
+        const currentURL: string = window.location.href;
+
         navLinks.forEach((link) => {
             if (link.href === currentURL) {
                 link.classList.add("active");
             }
         });
 
-        const navbar = document.querySelector('.navbar');
+        const navbar = document.querySelector('.navbar') as HTMLElement;
+
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) { // Puedes ajustar el valor según tus necesidades
+            if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');

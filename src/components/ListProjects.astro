@@ -1,7 +1,110 @@
 ---
-import { Image } from "astro:assets";
+interface Props {
+  title: string;
+  intoTitle: string;
+  subTitle: string;
+  backgroundColor: string;
+  bordeCategory?: string;
+}
+const { title, intoTitle, subTitle, backgroundColor, bordeCategory } = Astro.props;
 
-
+const images = [
+    {
+        idCategory: 1,
+        title: "Allanados",
+        category: "raided",
+        imgs: [
+            {
+                idImg: 1,
+                src: allanado_1.src,
+                image: allanado_1,
+                category: "raided"
+            },
+            {
+                idImg: 2,
+                src: allanado_2.src,
+                image: allanado_2,
+                category: "raided"
+            },
+        ]
+    },
+    {
+        idCategory: 2,
+        title: "Residencial",
+        category: "residential",
+        imgs: [
+            {
+                idImg: 1,
+                src: residencial_1.src,
+                image: residencial_1,
+                category: "residential"
+            },
+            {
+                idImg: 2,
+                src: residencial_2.src,
+                image: residencial_2,
+                category: "residential"
+            },
+            {
+                idImg: 3,
+                src: residencial_3.src,
+                image: residencial_3,
+                category: "residential"
+            },
+        ]
+    },
+    {
+        idCategory: 3,
+        title: "Plateas",
+        category: "stalls",
+        imgs: [
+            {
+                idImg: 1,
+                src: platea_1.src,
+                image: platea_1,
+                category: "stalls"
+            },
+            {
+                idImg: 2,
+                src: platea_2.src,
+                image: platea_2,
+                category: "stalls"
+            },
+            {
+                idImg: 3,
+                src: platea_3.src,
+                image: platea_3,
+                category: "stalls"
+            },
+        ]
+    },
+    {
+        idCategory: 4,
+        title: "Veredas",
+        category: "sidewalks",
+        imgs: [
+            {
+                idImg: 1,
+                src: vereda_1.src,
+                image: vereda_1,
+                category: "sidewalks"
+            },
+        ]
+    },
+    {
+        idCategory: 5,
+        title: "Pisos",
+        category: "floors",
+        imgs: [
+            {
+                idImg: 1,
+                src: piso_1.src,
+                image: piso_1,
+                category: "floors"
+            },
+        ]
+    },
+];
 // A
 import allanado_1 from "../assets/images/work-done/allanados/allanado-1a.webp"
 import allanado_2 from "../assets/images/work-done/allanados/allanado-1b.webp"
@@ -23,29 +126,29 @@ import vereda_1 from "../assets/images/work-done/veredas/vereda-1a.webp"
 import piso_1 from "../assets/images/work-done/pisos/piso-1a.webp"
 ---
 
-<div class="background-projects">
+<div class={`${backgroundColor}`}>
     <div class="container">
         <div class="row">
-            <h2 class="sub-title">Algunos de</h2>
-            <h1 class="into-title">nuestros proyectos</h1>
+            <h2 class={`${subTitle}`}>Algunos de</h2>
+            <h1 class={`${intoTitle}`}>nuestros proyectos</h1>
             <div class="button-group-wrap mt-4">
-                <div id="filters" class="button-group filter-button-group">
+                <div id="filters" class={`button-group filter-button-group bordeCategory`}>
                     <button data-filter="*" class="filter-active active"
                         >Ver Todos</button
                     >
-                    <button data-filter=".commercial" class="filter-active"
+                    <button data-filter=".raided" class="filter-active"
                         >Allanados</button
                     >
-                    <button data-filter=".education" class="filter-active"
+                    <button data-filter=".residential" class="filter-active"
                         >Residencial</button
                     >
-                    <button data-filter=".infrastructure" class="filter-active"
+                    <button data-filter=".stalls" class="filter-active"
                         >Plateas</button
                     >
-                    <button data-filter=".residential" class="filter-active"
+                    <button data-filter=".sidewalks" class="filter-active"
                         >Veredas</button
                     >
-                    <button data-filter=".healthcare" class="filter-active"
+                    <button data-filter=".floors" class="filter-active"
                         >Pisos</button
                     >
                 </div>
@@ -56,308 +159,255 @@ import piso_1 from "../assets/images/work-done/pisos/piso-1a.webp"
     <div class="container">
         <div class="box-listing">
             <div class="row" id="gallery">
-                <div class="fila isotope-item box-item commercial">
-                    <h1 class="title">Allanados</h1>
-                    <div class="commercial isotope-item commercial">
-                        <div class="isotope-img-container">
-                            <a
-                                class="gallery-popup"
-                                data-pswp-src={allanado_1.src}
-                                data-pswp-width="1669"
-                                data-pswp-height="1669"
-                                target="_blank"
-                            >
-                                <Image src={allanado_1} class="imagenes" alt="" />
-                                <span class="gallery-icon">
-                                    <i class="bi bi-fullscreen"></i>
-                                </span>
-                            </a>
-                            <div class="project-item-info">
-                                <div class="project-item-info-content">
-                                    <h3 class="project-item-title">
-                                        <h3 style="color: aliceblue;">
-                                            Local Lavallol
-                                        </h3>
-                                    </h3>
-                                    <p class="project-cat">Comercial</p>
+                {
+                    images.map(item => {
+                        // ALLANADOS
+                        if (item?.title === "Allanados" && item?.imgs.length) {
+                            return(
+                                <div class={`fila isotope-item box-item ${item?.category}`}>
+                                    <h1 class={`${title}`}>Allanados</h1>
+
+                                    {item?.imgs.map(img => (
+                                        <div class={`isotope-item ${img?.category}`}>
+                                            <div class="isotope-img-container">
+                                                <a
+                                                    class="gallery-popup"
+                                                    href={img?.src}
+                                                    data-pswp-width="1669"
+                                                    data-pswp-height="1669"
+                                                    target="_blank"
+                                                >
+                                                    <img
+                                                        loading="lazy"
+                                                        class="imagenes"
+                                                        alt={`Foto de la galería de ${item?.title}`}
+                                                        src={img?.src}
+                                                    />
+                                                    <span class="gallery-icon">
+                                                        <i class="bi bi-fullscreen"></i>
+                                                    </span>
+                                                </a>
+                                                <div class="project-item-info">
+                                                    <div class="project-item-info-content">
+                                                        <h3 class="project-item-title">
+                                                            <h3 style="color: aliceblue;">
+                                                                Local Lavallol
+                                                            </h3>
+                                                        </h3>
+                                                        <p class="project-cat">Allanados</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                            )
+                        }
+                   
                     
-                    <div class="commercial isotope-item commercial">
-                        <div class="isotope-img-container">
-                            <a
-                                class="gallery-popup"
-                                data-pswp-src={allanado_2.src}
-                                data-pswp-width="1669"
-                                data-pswp-height="1669"
-                                target="_blank"
-                            >
-                                <Image src={allanado_2} class="imagenes" alt="" />
-                                <span class="gallery-icon">
-                                    <i class="bi bi-fullscreen"></i>
-                                </span>
-                            </a>
-                            <div class="project-item-info">
-                                <div class="project-item-info-content">
-                                    <h3 class="project-item-title">
-                                        <h3 style="color: aliceblue;">
-                                            Local Lavallol
-                                        </h3>
-                                    </h3>
-                                    <p class="project-cat">Comercial</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        
+                        // RESIDENCIAL
+                        if (item?.title === "Residencial") {
 
-                <div class="fila isotope-item box-item education">
-                    <h1 class="title">Residencial</h1>
-                    <div class="education isotope-item education">
-                        <div class="isotope-img-container">
-                            <a
-                                class="gallery-popup"
-                                data-pswp-src={residencial_1.src}
-                                data-pswp-width="1669"
-                                data-pswp-height="1669"
-                                target="_blank"
-                            >
-                                <Image src={residencial_1} class="imagenes" alt="" />
-                                <span class="gallery-icon"
-                                    ><i class="bi bi-fullscreen"></i></span
-                                >
-                            </a>
-                            <div class="project-item-info">
-                                <div class="project-item-info-content">
-                                    <h3 class="project-item-title">
-                                        <h3 style="color: aliceblue;">
-                                            Duplex San Bernardo
-                                        </h3>
-                                    </h3>
-                                    <p class="project-cat">Residencial</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="isotope-item education">
-                        <div class="isotope-img-container">
-                            <a
-                                class="gallery-popup"
-                                data-pswp-src={residencial_2.src}
-                                data-pswp-width="1669"
-                                data-pswp-height="1669"
-                                target="_blank"
-                            >
-                                <Image src={residencial_2} class="imagenes" alt="" />
-                                <span class="gallery-icon"
-                                    ><i class="bi bi-fullscreen"></i></span
-                                >
-                            </a>
-                            <div class="project-item-info">
-                                <div class="project-item-info-content">
-                                    <h3 class="project-item-title">
-                                        <h3 style="color: aliceblue;">
-                                            Duplex San Bernardo
-                                        </h3>
-                                    </h3>
-                                    <p class="project-cat">Residencial</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                            return (
+                                <div class={`fila isotope-item box-item ${item?.category}`}>
+                                    <h1 class={`${title}`}>Residencial</h1>
 
-                    <div class="isotope-item education">
-                        <div class="isotope-img-container">
-                            <a
-                                class="gallery-popup"
-                                data-pswp-src={residencial_3.src}
-                                data-pswp-width="1669"
-                                data-pswp-height="1669"
-                                target="_blank"
-                            >
-                                <Image src={residencial_3} class="imagenes" alt="" />
-                                <span class="gallery-icon"
-                                    ><i class="bi bi-fullscreen"></i></span
-                                >
-                            </a>
-                            <div class="project-item-info">
-                                <div class="project-item-info-content">
-                                    <h3 class="project-item-title">
-                                        <h3 style="color: aliceblue;">
-                                            Duplex San Bernardo
-                                        </h3>
-                                    </h3>
-                                    <p class="project-cat">Residencial</p>
+                                    {item?.imgs.map(img => (
+                                        <div class={`isotope-item ${img?.category}`}>
+                                            <div class="isotope-img-container">
+                                                <a
+                                                    class="gallery-popup"
+                                                    href={img?.src}
+                                                    data-pswp-width="1669"
+                                                    data-pswp-height="1669"
+                                                    target="_blank"
+                                                >
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        class="imagenes"
+                                                        alt={`Foto de la galería de ${item?.title}`}
+                                                        src={img?.src}
+                                                    />
+                                                    {/* <Image src={img?.image} class="imagenes" alt="Foto del album Construcciones" /> */}
+                                                    <span class="gallery-icon">
+                                                        <i class="bi bi-fullscreen"></i>
+                                                    </span>
+                                                </a>
+                                                <div class="project-item-info">
+                                                    <div class="project-item-info-content">
+                                                        <h3 class="project-item-title">
+                                                            <h3 style="color: aliceblue;">
+                                                                Duplex San Bernardo
+                                                            </h3>
+                                                        </h3>
+                                                        <p class="project-cat">Residencial</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                            );
+                        }
 
-                <div class="fila isotope-item box-item infrastructure">
-                    <h1 class="title">Plateas</h1>
-                    <div class="infrastructure isotope-item infrastructure">
-                        <div class="isotope-img-container">
-                            <a
-                                class="gallery-popup"
-                                data-pswp-src={platea_1.src}
-                                data-pswp-width="1669"
-                                data-pswp-height="1669"
-                                target="_blank"
-                            >
-                                <Image src={platea_1} class="imagenes" alt="" />
-                                <span class="gallery-icon"
-                                    ><i class="bi bi-fullscreen"></i></span
-                                >
-                            </a>
-                            <div class="project-item-info">
-                                <div class="project-item-info-content">
-                                    <h3 class="project-item-title">
-                                        <h3 style="color: aliceblue;">
-                                            Plateas Fincas
-                                        </h3>
-                                    </h3>
-                                    <p class="project-cat">Plateas</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="infrastructure isotope-item infrastructure">
-                        <div class="isotope-img-container">
-                            <a
-                                class="gallery-popup"
-                                data-pswp-src={platea_2.src}
-                                data-pswp-width="1669"
-                                data-pswp-height="1669"
-                                target="_blank"
-                            >
-                                <Image src={platea_2} class="imagenes" alt="" />
-                                <span class="gallery-icon"
-                                    ><i class="bi bi-fullscreen"></i></span
-                                >
-                            </a>
-                            <div class="project-item-info">
-                                <div class="project-item-info-content">
-                                    <h3 class="project-item-title">
-                                        <h3 style="color: aliceblue;">
-                                            Plateas Fincas
-                                        </h3>
-                                    </h3>
-                                    <p class="project-cat">Plateas</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        // PLATEAS
+                        if (item?.title === "Plateas") {
 
-                    <div class="infrastructure isotope-item infrastructure">
-                        <div class="isotope-img-container">
-                            <a
-                                class="gallery-popup"
-                                data-pswp-src={platea_3.src}
-                                data-pswp-width="1669"
-                                data-pswp-height="1669"
-                                target="_blank"
-                            >
-                                <Image src={platea_3} class="imagenes" alt="" />
-                                <span class="gallery-icon"
-                                    ><i class="bi bi-fullscreen"></i></span
-                                >
-                            </a>
-                            <div class="project-item-info">
-                                <div class="project-item-info-content">
-                                    <h3 class="project-item-title">
-                                        <h3 style="color: aliceblue;">
-                                            Plateas Fincas
-                                        </h3>
-                                    </h3>
-                                    <p class="project-cat">Plateas</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                            return (
+                                <div class={`fila isotope-item box-item ${item?.category}`}>
+                                    <h1 class={`${title}`}>Plateas</h1>
 
-                <div class="fila isotope-item box-item residential">
-                    <h1 class="title">Veredas</h1>
-                    <div class="residential isotope-item residential">
-                        <div class="isotope-img-container">
-                            <a
-                                class="gallery-popup"
-                                data-pswp-src={vereda_1.src}
-                                data-pswp-width="1669"
-                                data-pswp-height="1669"
-                                target="_blank"
-                            >
-                                <Image src={vereda_1} class="imagenes" alt="" />
-                                <span class="gallery-icon"
-                                    ><i class="bi bi-fullscreen"></i></span
-                                >
-                            </a>
-                            <div class="project-item-info">
-                                <div class="project-item-info-content">
-                                    <h3 class="project-item-title">
-                                        <h3 style="color: aliceblue;">
-                                            Vereda San Bernardo
-                                        </h3>
-                                    </h3>
-                                    <p class="project-cat">Veredas</p>
+                                    {item?.imgs.map(img => (
+                                        <div class={`isotope-item ${img?.category}`}>
+                                            <div class="isotope-img-container">
+                                                <a
+                                                    class="gallery-popup"
+                                                    href={img?.src}
+                                                    data-pswp-width="1669"
+                                                    data-pswp-height="1669"
+                                                    target="_blank"
+                                                >
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        class="imagenes"
+                                                        alt={`Foto de la galería de ${item?.title}`}
+                                                        src={img?.src}
+                                                    />
+                                                    {/* <Image src={img?.image} class="imagenes" alt="Foto del album Construcciones" /> */}
+                                                    <span class="gallery-icon">
+                                                        <i class="bi bi-fullscreen"></i>
+                                                    </span>
+                                                </a>
+                                                <div class="project-item-info">
+                                                    <div class="project-item-info-content">
+                                                        <h3 class="project-item-title">
+                                                            <h3 style="color: aliceblue;">
+                                                                Plateas Fincas
+                                                            </h3>
+                                                        </h3>
+                                                        <p class="project-cat">Plateas</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                            );
+                        }
 
-                <div class="fila isotope-item box-item healthcare">
-                    <h1 class="title">Pisos</h1>
-                    <div class="healthcare isotope-item healthcare">
-                        <div class="isotope-img-container">
-                            <a
-                                class="gallery-popup"
-                                data-pswp-src={piso_1.src}
-                                data-pswp-width="1669"
-                                data-pswp-height="1669"
-                                target="_blank"
-                            >
-                                <Image src={piso_1} class="imagenes" alt="" />
-                                <span class="gallery-icon"
-                                    ><i class="bi bi-fullscreen"></i></span
-                                >
-                            </a>
-                            <div class="project-item-info">
-                                <div class="project-item-info-content">
-                                    <h3 class="project-item-title">
-                                        <h3 style="color: aliceblue;">
-                                            Pisos
-                                        </h3>
-                                    </h3>
-                                    <p class="project-cat">Pisos</p>
+                        // VEREDAS
+                        if (item?.title === "Veredas") {
+
+                            return (
+                                <div class={`fila isotope-item box-item ${item?.category}`}>
+                                    <h1 class={`${title}`}>Veredas</h1>
+
+                                    {item?.imgs.map(img => (
+                                        <div class={`isotope-item ${img?.category}`}>
+                                            <div class="isotope-img-container">
+                                                <a
+                                                    class="gallery-popup"
+                                                    href={img?.src}
+                                                    data-pswp-width="1669"
+                                                    data-pswp-height="1669"
+                                                    target="_blank"
+                                                >
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        class="imagenes"
+                                                        alt={`Foto de la galería de ${item?.title}`}
+                                                        src={img?.src}
+                                                    />
+                                                    {/* <Image src={img?.image} class="imagenes" alt="Foto del album Construcciones" /> */}
+                                                    <span class="gallery-icon">
+                                                        <i class="bi bi-fullscreen"></i>
+                                                    </span>
+                                                </a>
+                                                <div class="project-item-info">
+                                                    <div class="project-item-info-content">
+                                                        <h3 class="project-item-title">
+                                                            <h3 style="color: aliceblue;">
+                                                                Vereda San Bernardo
+                                                            </h3>
+                                                        </h3>
+                                                        <p class="project-cat">Veredas</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                            );
+                        }
+
+                        // PISOS
+                        if (item?.title === "Pisos") {
+
+                            return (
+                                <div class={`fila isotope-item box-item ${item?.category}`}>
+                                    <h1 class={`${title}`}>Pisos</h1>
+
+                                    {item?.imgs.map(img => (
+                                        <div class={`isotope-item ${img?.category}`}>
+                                            <div class="isotope-img-container">
+                                                <a
+                                                    class="gallery-popup"
+                                                    href={img?.src}
+                                                    data-pswp-width="1669"
+                                                    data-pswp-height="1669"
+                                                    target="_blank"
+                                                >
+                                                    <img
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                        class="imagenes"
+                                                        alt={`Foto de la galería de ${item?.title}`}
+                                                        src={img?.src}
+                                                    />
+                                                    {/* <Image src={img?.image} class="imagenes" alt="Foto del album Construcciones" /> */}
+                                                    <span class="gallery-icon">
+                                                        <i class="bi bi-fullscreen"></i>
+                                                    </span>
+                                                </a>
+                                                <div class="project-item-info">
+                                                    <div class="project-item-info-content">
+                                                        <h3 class="project-item-title">
+                                                            <h3 style="color: aliceblue;">
+                                                                Pisos
+                                                            </h3>
+                                                        </h3>
+                                                        <p class="project-cat">Pisos</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            );
+                        }
+                    })
+                }
             </div>
         </div>
     </div>
 </div>
 
 <style lang="sass">
-    @use '../assets/sass/pages/projects/projects'
+    @use '../assets/sass/pages/home/components/projects'
 </style>
 
 <script>
     import PhotoSwipeLightbox from "photoswipe/lightbox";
-
     const lightbox = new PhotoSwipeLightbox({
         gallery: "#gallery",
         children: "a",
         pswpModule: () => import("photoswipe"),
     });
-
     lightbox.init();
-
 
     document.addEventListener("DOMContentLoaded", () => {
         const elem = document.querySelector(".box-listing");

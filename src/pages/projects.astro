@@ -1,5 +1,5 @@
 ---
-// LAYOUT
+// LAYOUTS
 import Layout from '../layouts/Layout.astro';
 import Header from '../layouts/Header.astro';
 import Footer from '../layouts/Footer.astro';
@@ -17,12 +17,11 @@ import "bootstrap-icons/font/bootstrap-icons.min.css";
 <Layout title="Welcome to Astro.">
 	<Header />
     	<Banner titleBanner='PROYECTOS' imgBanner="banner-img-1"/>
-		<ListProjects />
+		<ListProjects title='title--2' subTitle='sub-title--2' intoTitle='into-title--2' backgroundColor="background-projects--2" borderCategory="border-category--2"/>
+
 	<Footer />
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 </Layout>
-<style lang="sass">
-    @use '../assets/sass/base/resets'
-</style>
 <script>
 	// Astro will bundle and process this automatically
 	import 'bootstrap/dist/js/bootstrap.bundle.min.js'

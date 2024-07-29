@@ -1,8 +1,35 @@
+#whatsapp-mobile {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 100;
+}
+
+#whatsapp-desktop {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  #whatsapp-mobile {
+    display: none;
+  }
+  #whatsapp-desktop {
+    display: block;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 100;
+  }
+}
+
+// #whatsapp-tel {
+//   transform: scaleX(-1);
+// }
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: aqua;
     
     // NO BORRAR
     // font: inherit;
